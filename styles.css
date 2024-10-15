@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAF0F4;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #00478F;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 5rem;  /* Additional margin if needed */
+    max-width: 1200px;
+    margin: 2rem auto 0;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.rounded-logo {
+    border-radius: 50%;
+}
+
+/* Centered Header */
+main h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00478F;
+    margin: 2rem 0;
+}
+
+/* Centered Image */
+.centered-image {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.centered-image img {
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    background-color: #00478F;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Contract Box - Update for responsive wrapping */
+.contract-box {
+    background-color: #DDE5EB;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: monospace;
+    color: #00478F;
+    font-size: 30px;
+    word-wrap: break-word;  /* Allow long words or text to wrap */
+    overflow-wrap: break-word;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.photo-grid img {
+    width: 100%;  /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes the bottom space in inline elements */
+}
+
+/* RESPONSIVENESS FOR MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the nav items */
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Increase font size for better visibility */
+    }
+
+    .centered-image img {
+        max-width: 100%; /* Ensure the image scales to fit smaller screens */
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Stack buttons on top of each other */
+        gap: 1rem;
+    }
+
+    .cta-button {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 2rem; /* Adjust header size for mobile */
+    }
+
+    /* Adjust Photo Grid for mobile */
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 1rem;
+    }
+
+    .contract-box {
+        font-size: 20px; /* Adjust font size of the contract box */
+    }
+}
